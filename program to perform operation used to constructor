@@ -1,0 +1,47 @@
+class Complex(object):
+    def __init__(self,real,img=0.0):
+        self.real=real
+        self.img=img
+    def print_Complex_Number(self):
+        print('(',self.real,' ,',self.img,')')
+    def __add__(self,other):
+        return Complex(self.real + other.real,self.img + other.img)
+    def __sub__(self,other):
+        return Complex(self.real- other.real,self.img-other.img)
+    def __mul__(self,other):
+        return Complex(self.real * other.real,self.img * other.img)
+    def __eq__(self,other):
+        return self.real==other.real and self.img==other.img
+    def __le__(self,other):
+        return (self.real < other.real and self.img<other.img)
+    def __ge__(self,other):
+        return (self.real > other.real and self.img>other.img)
+
+C1=Complex(2,1)
+print('First complex number is as follows:')
+C1.print_Complex_Number()
+
+C2=Complex(5,6)
+print('Second complex number is as follow:')
+C2.print_Complex_Number()
+
+print('Addition of two complex number is as follow: ')
+C3=C1+C2
+C3.print_Complex_Number()
+
+print('Subtraction of two complex number as follow: ')
+C4=C1-C2
+C4.print_Complex_Number()
+
+print('Multiplication of two complex number as follow:')
+C5=C1*C2
+C5.print_Complex_Number()
+
+print('Compare Two complex number:')
+print((C1==C2))
+
+print('Checking if C1 is Greater than C2:')
+print((C1 >= C2))
+
+print('Checking if C1 is less than C2:')
+print((C1 <= C2))
