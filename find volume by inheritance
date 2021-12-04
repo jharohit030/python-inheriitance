@@ -1,0 +1,38 @@
+class Box:
+    width=0
+    height=0
+    depth=0
+    def __init__(self,w,h,d):
+        self.width=w
+        self.height=h
+        self.depth=d
+    def volume(self):
+        return self.width * self.height * self.depth
+class ChildBox(Box):
+    weight=0
+    def __init__(self,w,h,d,wt):
+        self.width=w
+        self.height=h
+        self.depth=d
+        self.weight=wt
+    def volume(self):
+        return self.width * self.height * self.depth
+B1=ChildBox(10,20,30,1000)
+B2=ChildBox(5,4,2,100)
+vol=B1.volume()
+
+print('-------Characteristics of Box1---------')
+print('Width=',B1.width)
+print('Height=',B1.height)
+print('Depth=',B1.depth)
+print('Weight=',B1.weight)
+print('Volume of Box1=',vol)
+
+print('-------Characteristics of Box2---------')
+print('Width=',B2.width)
+print('Height=',B2.height)
+print('Depth=',B2.depth)
+print('Weight=',B2.weight)
+vol=B2.volume()
+
+print('Volume of Box2=',vol)
