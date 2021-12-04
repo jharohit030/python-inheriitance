@@ -1,0 +1,18 @@
+class A:
+    a=0
+class B:
+    b=0
+class C(A,B):
+    c=0
+    def read(self):
+        self.a=(int(input('Enter the value of a:')))
+        self.b=(int(input('Enter the value of b:')))
+        self.c=(int(input('Enter the value of c:')))
+    def display(self):
+        print('a=',self.a)
+        print('b=',self.b)
+        print('c=',self.c)
+
+ob1=C()
+ob1.read()
+ob1.display()
